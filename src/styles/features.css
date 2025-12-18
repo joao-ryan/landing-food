@@ -1,0 +1,162 @@
+/* HERO EXTRAS */
+.badge-new {
+  display: inline-block;
+  background-color: #FFE082;
+  color: #E65100;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.hero-stats {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #555;
+  font-weight: 600;
+}
+
+.stat-item i {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+}
+
+/* FEATURES SECTION (Why Us) */
+#features {
+  background-color: var(--white);
+  text-align: center;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.feature-card {
+  background: var(--bg-warm);
+  padding: 2.5rem;
+  border-radius: var(--radius);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-hover);
+  background: #FFF;
+}
+
+.icon-box {
+  width: 70px;
+  height: 70px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-size: 1.8rem;
+  color: #fff;
+  transition: transform 0.3s;
+}
+
+.feature-card:hover .icon-box {
+  transform: rotateY(180deg);
+}
+
+.feature-card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  color: var(--text-color);
+}
+
+.feature-card p {
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* TESTIMONIALS SECTION */
+#testimonials {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  color: #fff;
+  text-align: center;
+}
+
+#testimonials .section-title,
+#testimonials .section-subtitle {
+  color: #fff;
+}
+
+#testimonials .section-subtitle {
+  opacity: 0.9;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.review-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: var(--radius);
+  padding: 2rem;
+  text-align: left;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.review-card::before {
+  content: '\F585';
+  /* Bootstrap Quote Icon code, or use " " */
+  font-family: 'bootstrap-icons';
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 4rem;
+  color: rgba(0, 0, 0, 0.05);
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 1.5rem;
+}
+
+.user-profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid var(--primary-color);
+}
+
+.user-profile h4 {
+  color: #333;
+  margin-bottom: 2px;
+}
+
+.stars i {
+  color: #FFC107;
+  font-size: 0.8rem;
+}
+
+.review-card p {
+  color: #555;
+  font-style: italic;
+  line-height: 1.6;
+}

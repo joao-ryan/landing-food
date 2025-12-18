@@ -1,0 +1,190 @@
+/* MENU SECTION */
+#menu {
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.section-header {
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: var(--primary-dark);
+  font-weight: 800;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  font-weight: 400;
+}
+
+/* Carousel Container */
+.carousel-wrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.carousel-track-container {
+  overflow: hidden;
+  width: 100%;
+  padding: 20px 0;
+  /* Space for shadows */
+}
+
+.carousel-track {
+  display: flex;
+  gap: 2rem;
+  transition: transform 0.5s ease-in-out;
+  /* Will be controlled by JS 'translateX' */
+}
+
+/* Carousel Buttons */
+.carousel-btn {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  color: var(--primary-color);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  position: absolute;
+}
+
+.carousel-btn:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.prev-btn {
+  left: 0;
+}
+
+.next-btn {
+  right: 0;
+}
+
+/* PRATO CARD */
+.card-prato {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  /* Soft shadow */
+  width: 280px;
+  /* Fixed width for carousel calc */
+  flex-shrink: 0;
+  /* Prevent shrinking */
+  padding: 1.5rem;
+  position: relative;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.card-prato:hover {
+  transform: translateY(-10px);
+}
+
+.badge-like {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #ddd;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.badge-like:hover,
+.badge-like.active {
+  color: var(--secondary-color);
+}
+
+.prato-img {
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.1));
+}
+
+.prato-nome {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.prato-desc {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+  /* Pushes footer down */
+}
+
+.rating {
+  color: #ffc107;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.prato-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.price {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--primary-dark);
+}
+
+.btn-add {
+  background-color: var(--text-color);
+  color: #fff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-add:hover {
+  background-color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .carousel-btn {
+    display: none;
+  }
+
+  /* On mobile, let them scroll naturally? or keep arrows? keep arrows but maybe stick them closer */
+  .carousel-wrapper {
+    padding: 0;
+    /* overflow-x: auto; For native scroll if JS fails, but we'll try JS first */
+  }
+}
